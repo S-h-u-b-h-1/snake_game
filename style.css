@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    background: linear-gradient(135deg, #0c1021, #1c1f35);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* GAME BOARD STYLES */
+#gameContainer {
+    width: 50vw;
+    height: 50vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 2vw auto;
+    background: radial-gradient(circle, #0c1021 50%, #1a1d31);
+    border: solid 10px #3a3f5a;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* GAME PIXELS */
+.gameBoardPixel {
+    width: 2.5%;
+    height: 2.5%;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+/* SNAKE STYLES */
+.snakeBodyPixel {
+    background: linear-gradient(45deg, #fd6401, #ff8000);
+    box-shadow: 0 0 15px #fd6401;
+    border-radius: 5px;
+}
+
+/* FOOD STYLES */
+.food {
+    background: radial-gradient(circle, #68e768, #45c745);
+    box-shadow: 0 0 15px #68e768;
+    border-radius: 50%;
+}
+
+/* SCORE STYLES */
+#scoreContainer {
+    width: 50vw;
+    max-width: 500px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.scoreBoard {
+    border-radius: 12px;
+    border: solid 4px #3a3f5a;
+    color: white;
+    background: #1a1d31;
+    padding: 1vw;
+    width: 40%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* HIDE CONTROLS ON DESKTOP */
+#onScreenControllers {
+    display: none;
+}
+
+/* DEVELOPER DETAILS */
+.developerDetails {
+    margin-top: 2vw;
+    color: white;
+    font-family: monospace;
+}
+
+.developerDetails a {
+    color: #68e768;
+    text-decoration: none;
+}
+
+.developerDetails a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE MOBILE STYLES */
+@media only screen and (max-width: 768px) {
+    #gameContainer {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .gameBoardPixel {
+        width: 2.5%;
+        height: 2.5%;
+    }
+
+    #scoreContainer {
+        width: 90vw;
+    }
+
+    #onScreenControllers {
+        width: 90vw;
+        margin: 5vw auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #onScreenControllers > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #onScreenControllers button {
+        background-color: transparent;
+        height: 18vw;
+        width: 18vw;
+        font-size: 10vw;
+        border: none;
+        color: white;
+    }
+
+    #onScreenControllers button:focus {
+        outline: none;
+    }
+
+    #onScreenControllers button:active {
+        background-color: slategray;
+    }
+}
